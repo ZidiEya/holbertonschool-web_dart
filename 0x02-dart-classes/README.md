@@ -3,7 +3,23 @@
 
 🐦 What is Dart?
 Dart is a modern, object-oriented, statically-typed programming language developed by Google. It is optimized for building fast, multi-platform applications, especially for:
+Here are the files included in the 0x02-dart-classes directory:
 
+0-class.dart – Defines a basic User class with a showName() method.
+
+1-usertojson.dart – Adds age, height and a toJson() method to User.
+
+2-password.dart – Defines a Password class with validation and a custom toString.
+
+3-private_password.dart – Makes the password private and adds proper access.
+
+4-mutables.dart – Adds getters and setters to make the password mutable.
+
+5-json_to_user.dart – Extends User with id, fromJson, and a custom toString.
+
+6-password.dart – Contains the updated Password class used for inheritance.
+
+6-inheritance.dart – User class extends Password, adds user_password property, and validation.
 ✅ Client-side development (mobile, web, and desktop)
 
 🚀 Flutter — Dart’s most popular framework — used to build beautiful, natively compiled apps for iOS, Android, Web, Windows, macOS, and Linux from a single codebase.
