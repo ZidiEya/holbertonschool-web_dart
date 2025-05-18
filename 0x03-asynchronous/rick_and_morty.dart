@@ -9,7 +9,7 @@ Future<void> printRmCharacters() async {
       final response = await http.get(Uri.parse(url));
 
       if (response.statusCode != 200) {
-        throw 'Failed to load data: ${response.statusCode}';
+        throw 'Failed to load characters. Status code: ${response.statusCode}';
       }
 
       final data = jsonDecode(response.body);
@@ -19,11 +19,9 @@ Future<void> printRmCharacters() async {
         print(character['name']);
       }
 
-      // Go to next page if available
       url = data['info']['next'] ?? '';
     }
   } catch (error) {
     print('error caught: $error');
   }
 }
-
