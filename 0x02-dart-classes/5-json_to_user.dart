@@ -4,10 +4,13 @@ class User {
   int age;
   double height;
 
-  // Constructor
-  User({required this.id, required this.name, required this.age, required this.height});
+  User({
+    required this.id,
+    required this.name,
+    required this.age,
+    required this.height,
+  });
 
-  // Convert User to JSON map
   Map<String, dynamic> toJson() {
     return {
       'id': id,
@@ -17,7 +20,6 @@ class User {
     };
   }
 
-  // Create User from JSON map
   static User fromJson(Map<dynamic, dynamic> userJson) {
     return User(
       id: userJson['id'],
