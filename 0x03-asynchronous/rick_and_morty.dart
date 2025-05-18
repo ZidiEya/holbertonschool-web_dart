@@ -7,11 +7,6 @@ Future<void> printRmCharacters() async {
 
     while (url.isNotEmpty) {
       final response = await http.get(Uri.parse(url));
-
-      if (response.statusCode != 200) {
-        throw 'Failed to load characters. Status code: ${response.statusCode}';
-      }
-
       final data = jsonDecode(response.body);
       final characters = data['results'];
 
@@ -21,7 +16,7 @@ Future<void> printRmCharacters() async {
 
       url = data['info']['next'] ?? '';
     }
-  } catch (error) {
-    print('error caught: $error');
+  } catch (e) {
+    print('error caught: $e');
   }
 }
