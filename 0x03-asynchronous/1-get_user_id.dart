@@ -1,7 +1,8 @@
-import '0-util.dart'; // Assuming fetchUserData() is in this file
+import 'dart:convert'; // For json decoding
+import '1-util.dart'; // To import fetchUserData()
 
 Future<String> getUserId() async {
-  // fetchUserData() should return a Map or an object containing user info including 'id'
-  final userData = await fetchUserData();
-  return userData['id'];
+  String userJson = await fetchUserData();
+  Map<String, dynamic> userMap = jsonDecode(userJson);
+  return userMap['id'];
 }
