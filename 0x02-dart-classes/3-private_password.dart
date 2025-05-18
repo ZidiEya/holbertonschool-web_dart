@@ -1,10 +1,7 @@
 class Password {
-  String _password = '';
+  String _password;
 
-  // Constructor to initialize password
-  Password({required String password}) {
-    _password = password;
-  }
+  Password({required String password}) : _password = password;
 
   bool isValid() {
     // Check password length
