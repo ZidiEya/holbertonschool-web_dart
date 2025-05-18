@@ -20,7 +20,6 @@ Practical examples like API calls, timers, and file operations
 
 Getting Started
 Prerequisites
-[List required software and versions, e.g., Dart SDK >= 2.10, Node.js >= 14, Python 3.x]
 
 [Any libraries or dependencies]
 
@@ -28,10 +27,7 @@ Installation
 Clone the repo:
 
 bash
-Copier
-Modifier
-git clone https://github.com/yourusername/0x03-asynchronous.git
-cd 0x03-asynchronous
+$cd 0x03-asynchronous
 Install dependencies:
 
 bash
