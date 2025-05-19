@@ -1,4 +1,3 @@
-0x00-hello-dart
 
 # 0x00. Hello, Dart
 
