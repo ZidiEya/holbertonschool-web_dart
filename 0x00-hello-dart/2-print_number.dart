@@ -1,5 +1,6 @@
+
+
 void main() {
-  int number = 98;
-  stdout.write(number);
-  print(' Battery street');
+  var n = 98;
+  print("$n Battery street\n");
 }
