@@ -4,31 +4,31 @@ class Password {
   Password({required String password}) : _password = password;
 
   bool isValid() {
-    // Check password length
     if (_password.length < 8 || _password.length > 16) {
       return false;
     }
 
-    // Check for at least one uppercase letter
-    if (!_password.contains(RegExp(r'[A-Z]'))) {
-      return false;
-    }
-
-    // Check for at least one lowercase letter
-    if (!_password.contains(RegExp(r'[a-z]'))) {
-      return false;
-    }
-
-    // Check for at least one digit
-    if (!_password.contains(RegExp(r'[0-9]'))) {
+    if (!_containsUppercase() || !_containsLowercase() || !_containsNumbers()) {
       return false;
     }
 
     return true;
   }
 
+  bool _containsUppercase() {
+    return _password.contains(RegExp(r'[A-Z]'));
+  }
+
+  bool _containsLowercase() {
+    return _password.contains(RegExp(r'[a-z]'));
+  }
+
+  bool _containsNumbers() {
+    return _password.contains(RegExp(r'[0-9]'));
+  }
+
   @override
   String toString() {
-    return 'Your Password is $_password';
+    return "Your Password is: $_password";
   }
 }
